@@ -4,7 +4,8 @@ A small personal website made as a good-luck gift before Beem's defense.
 **It is not affiliated with Google or Antigravity, and it is not a product page or installer.**
 The page title and the link preview say so.
 
-Live address once published: **https://z10ren.github.io/antigravitygoogle/**
+Live address once Pages is on: **https://z10ren.github.io/antigravitygoogle/**
+Custom address (after buying the domain, see section 4): **https://www.beantigravgoogle.com**
 
 ---
 
@@ -56,56 +57,68 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-## 3. Publish on GitHub Pages (repository: `antigravitygoogle`)
+## 3. Publish on GitHub Pages
 
-**Use Git or GitHub Desktop, not the drag-and-drop uploader on github.com.** The media filenames contain colons (Finder shows them as slashes, like `10/06/2026 - …`), and the browser uploader can mangle those names. Git keeps them exactly as they are.
+The repository is **https://github.com/Z10ren/antigravitygoogle** (public, branch `main`) and already holds every file, including the media with their original names.
 
-### a. Create the empty repository
-1. Go to https://github.com/new
-2. Repository name: **`antigravitygoogle`**
-3. Visibility: **Public** (free GitHub Pages needs a public repo, see the privacy note below)
-4. Leave "Add a README", .gitignore and license **unticked** → **Create repository**
+**Use Git or GitHub Desktop for changes, not the drag-and-drop uploader on github.com.** The media filenames contain colons (Finder shows them as slashes, like `10/06/2026 - …`), and the browser uploader can't keep those names.
 
-### b. Push this folder
-
-**With Terminal:**
-```bash
-cd ~/websites/antigravitygoogle
-git init
-git add .
-git commit -m "Good-luck gift for Beem"
-git branch -M main
-git remote add origin https://github.com/Z10ren/antigravitygoogle.git
-git push -u origin main
-```
-
-**Or with GitHub Desktop:** File → Add Local Repository → choose `~/websites/antigravitygoogle` → "create a repository" if asked → Commit to main → Publish repository (untick "Keep this code private") → name `antigravitygoogle`.
-
-### c. Turn on Pages
-1. On GitHub, open the repo → **Settings** → **Pages**
+### a. Turn on Pages (one time)
+1. Open https://github.com/Z10ren/antigravitygoogle/settings/pages (signed in as Z10ren)
 2. Build and deployment → Source: **Deploy from a branch**
 3. Branch: **main**, folder: **/ (root)** → **Save**
-4. Wait 1–3 minutes. The address appears at the top of that page:
+4. Wait 1–3 minutes. The address shows at the top of that page:
    **https://z10ren.github.io/antigravitygoogle/**
 
-### d. Updating later
-Change files, then:
+### b. Updating later
+Work from a clone of the repository so you're always in step with GitHub. Saving a custom domain (section 4) adds a `CNAME` file on GitHub, and a clone picks that up.
+
+**GitHub Desktop:** File → Clone Repository → `Z10ren/antigravitygoogle` → make changes → Commit to main → Push origin.
+
+**Terminal:**
 ```bash
+git clone https://github.com/Z10ren/antigravitygoogle.git
+cd antigravitygoogle
+# …make changes…
 git add .
-git commit -m "Add the letter"
+git commit -m "Update"
 git push
 ```
-Pages redeploys on its own in a minute or two. If the phone still shows the old version, reload it.
+Pages redeploys on its own in a minute or two. If a phone still shows the old version, reload it.
 
-### e. Quick check after it's live (on a phone)
+### c. Quick check after it's live (on a phone)
 - "Tap to start" starts the song, then the bouquet blooms and the three date groups appear.
 - Pause and mute work.
 - Each video plays when tapped.
-- The envelope opens to the letter (or the placeholder), and zoom works.
+- The envelope opens to the letter, and zoom works.
 
-If your GitHub username isn't `Z10ren`, swap it into the two `og:` lines near the top of `index.html` (they power the link preview). Nothing else needs changing.
+## 4. Custom domain: www.beantigravgoogle.com
 
----
+As of Oct 19, 2026, `beantigravgoogle.com` is **not registered**, so it has to be bought first.
+
+1. **Buy the domain** from any registrar (for example Porkbun, Namecheap, Cloudflare or GoDaddy).
+2. **Verify it with GitHub** (recommended; it stops anyone else from claiming it on GitHub):
+   your profile → Settings → Pages → **Add a domain** → `beantigravgoogle.com`, then add the TXT record GitHub shows you at the registrar.
+3. **Add it to the site:** repo → Settings → Pages → Custom domain → `www.beantigravgoogle.com` → Save.
+   GitHub adds a `CNAME` file to the repository for you.
+4. **DNS records at the registrar:**
+
+   | Type | Host / Name | Value |
+   |---|---|---|
+   | CNAME | `www` | `z10ren.github.io` |
+   | A | `@` | `185.199.108.153` |
+   | A | `@` | `185.199.109.153` |
+   | A | `@` | `185.199.110.153` |
+   | A | `@` | `185.199.111.153` |
+   | AAAA (optional) | `@` | `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153` |
+
+   The `A` records make `beantigravgoogle.com` (without www) forward to `www.` too. Remove any default "parking" records the registrar added for `@` or `www`.
+5. Back in Settings → Pages, wait for the DNS check to pass, then tick **Enforce HTTPS**. The certificate can take up to 24 hours, though it's usually minutes.
+6. Optional: in `index.html`, change the two `og:` lines (`og:url`, `og:image`) from `https://z10ren.github.io/antigravitygoogle/` to `https://www.beantigravgoogle.com/` so link previews use the new address.
+
+The site uses relative paths, so it works the same at the custom domain. The old `z10ren.github.io/antigravitygoogle/` link then redirects there automatically.
+
+**Don't save the custom domain in step 3 until you've actually bought it.** Once it's saved, the github.io link redirects to the new address, and that address won't load until the DNS is in place.
 
 ## Adding or removing photos and videos later
 
