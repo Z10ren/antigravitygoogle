@@ -1,0 +1,13 @@
+Put the scanned handwritten letter in this folder.
+
+  Name it:   letter.jpg      (letter.jpeg, letter.png or letter.webp also work)
+  2+ pages:  letter.jpg, letter-2.jpg, letter-3.jpg ... (same file type for every page)
+
+Tips
+  - Use JPG or PNG. HEIC (iPhone photo format) and PDF won't show in most browsers.
+    On a Mac: open the scan in Preview > File > Export > Format: JPEG.
+  - Keep the whole page — the site shows it uncropped and adds zoom.
+  - About 2000-3000 px tall is plenty sharp for zooming on a phone.
+
+Until a file is here, the site shows a "The scanned letter goes here" placeholder
+after the envelope opens. You can delete this .txt file once the scan is in.

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f3e6d1">
+
+  <!-- A personal gift. Not a Google or Antigravity product, page, or installer. -->
+  <title>For Beem · a good-luck gift before your defense</title>
+  <meta name="description" content="A personal good-luck gift for Beem before her defense: photos, videos and a handwritten letter. Not affiliated with Google or Antigravity.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A gift of good luck before your defense">
+  <meta property="og:description" content="A personal good-luck gift for Beem. Not a Google or Antigravity product.">
+  <meta property="og:url" content="https://z10ren.github.io/antigravitygoogle/">
+  <meta property="og:image" content="https://z10ren.github.io/antigravitygoogle/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/fraunces-latin-soft-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="is-intro is-gate">
+  <div class="flash" id="flash" aria-hidden="true"></div>
+
+  <!-- ===================== TAP TO START (starts the song) ===================== -->
+  <div class="gate" id="gate">
+    <div class="gate__frame">
+      <span class="vf-corner vf-corner--tl" aria-hidden="true"></span>
+      <span class="vf-corner vf-corner--tr" aria-hidden="true"></span>
+      <span class="vf-corner vf-corner--bl" aria-hidden="true"></span>
+      <span class="vf-corner vf-corner--br" aria-hidden="true"></span>
+
+      <p class="gate__for">for Beem</p>
+      <button class="gate__btn" id="gateBtn" type="button" aria-label="Tap to start. The music will begin.">
+        <svg viewBox="0 0 20 20" width="34" height="34" aria-hidden="true"><path d="M6 3.6v12.8L16.4 10z" fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="gate__label" aria-hidden="true">tap to start</p>
+      <p class="gate__hint">
+        <svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true"><path d="M3 7.5h3l4-3.5v12l-4-3.5H3z" fill="currentColor"/><path d="M13 7a4 4 0 0 1 0 6M15.2 4.8a7 7 0 0 1 0 10.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        sound on
+      </p>
+    </div>
+  </div>
+
+  <!-- ===================== OPENING ===================== -->
+  <header class="hero" id="top">
+    <h1 class="hero__title">
+      <span class="hero__line">A gift of good luck</span>
+      <span class="hero__line hero__line--em">before your defense</span>
+    </h1>
+
+    <div class="viewfinder" id="viewfinder" aria-hidden="true">
+      <span class="vf-corner vf-corner--tl"></span>
+      <span class="vf-corner vf-corner--tr"></span>
+      <span class="vf-corner vf-corner--bl"></span>
+      <span class="vf-corner vf-corner--br"></span>
+
+      <div class="vf-hud vf-hud--top">
+        <span class="vf-chip">
+          <svg viewBox="0 0 16 12" width="16" height="12"><path d="M1.5 3h3l1.2-1.6h4.6L11.5 3h3v7.5h-13z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><circle cx="8" cy="6.6" r="2.3" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+          AUTO
+        </span>
+        <span class="batt"><i></i><i></i><i></i></span>
+      </div>
+
+      <div class="vf-af" id="af"><span></span><span></span><span></span><span></span></div>
+
+      <div class="bouquet" id="bouquet"></div>
+
+      <div class="vf-hud vf-hud--bottom">
+        <span class="vf-chip">
+          <svg viewBox="0 0 10 14" width="10" height="14"><path d="M6.4 1 1.6 8h3.2L3.6 13 8.4 6H5.2z" fill="currentColor"/></svg>
+          ON
+        </span>
+        <span class="vf-chip vf-shots" id="shots">0000</span>
+      </div>
+    </div>
+
+    <p class="hero__cue" id="cue" aria-hidden="true">scroll <span>&darr;</span></p>
+  </header>
+
+  <!-- ===================== GALLERY ===================== -->
+  <main class="gallery" id="gallery" aria-label="Photos and videos, by date"></main>
+
+  <!-- ===================== THE LETTER ===================== -->
+  <section class="finale" id="finale" aria-labelledby="finaleLine">
+    <div class="finale__row" id="finaleRow">
+      <p class="finale__line" id="finaleLine">For my one and only babi <3.</p>
+      
+
+      <div class="env-wrap" id="envWrap">
+        <button class="envelope" id="envelope" type="button" aria-label="Open the envelope" aria-expanded="false" aria-controls="letter">
+          <span class="env__back"></span>
+          <span class="env__paper"><img id="envPreview" alt="" hidden></span>
+          <span class="env__pocket"></span>
+          <span class="env__flap"><span class="env__flap-front"></span><span class="env__flap-back"></span></span>
+          <span class="env__seal" aria-hidden="true">
+            <svg viewBox="0 0 24 30" width="20" height="25"><path d="M12 4c2 2 4 4.6 4 8.4 0 3-1.8 5-4 5s-4-2-4-5C8 8.6 10 6 12 4z" fill="currentColor"/><path d="M12 17v9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 24c-1.6-2.6-3.8-3.6-5.6-3.4 1 2.4 3 3.6 5.6 3.4zM12 22.4c1.4-2.2 3.4-3 5-2.8-.9 2-2.7 3-5 2.8z" fill="currentColor"/></svg>
+          </span>
+          <span class="env__to" aria-hidden="true">for Beem</span>
+        </button>
+        <p class="env__hint" aria-hidden="true">tap to open</p>
+      </div>
+    </div>
+
+    <div class="letter" id="letter" hidden>
+      <div class="letter__pages" id="letterPages"></div>
+      <div class="letter__tools" id="letterTools" hidden>
+        <button class="pill" id="zoomOpen" type="button">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12.6 12.6 17 17M8.5 6v5M6 8.5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Zoom in
+        </button>
+        <span id="letterLinks"></span>
+      </div>
+
+      <!-- Shown only until the scanned letter is added (see README.md). -->
+      <div class="letter__placeholder" id="letterPlaceholder" hidden>
+        <p class="ph__title">The scanned letter goes here</p>
+        <p>Save the scan in the project's <code>letter</code> folder as <code>letter.jpg</code> (PNG, JPEG or WebP is fine), then publish again. It will show here uncropped, with zoom.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MUSIC ===================== -->
+  <div class="music" id="music" role="group" aria-label="Background music">
+    <button class="music__prompt" id="musicPrompt" type="button" hidden>
+      <span aria-hidden="true">&#9834;</span> Tap anywhere to play the music
+    </button>
+    <div class="music__bar">
+      <div class="music__lcd" aria-hidden="true">
+        <span class="music__eq"><i></i><i></i><i></i></span>
+        <span class="music__marquee"><span id="songTitle"></span></span>
+      </div>
+      <button class="cam-btn" id="playBtn" type="button" aria-label="Play music">
+        <svg class="i-play" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M6 3.8v12.4L16 10z" fill="currentColor"/></svg>
+        <svg class="i-pause" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><rect x="4.5" y="3.5" width="4" height="13" rx="1.2" fill="currentColor"/><rect x="11.5" y="3.5" width="4" height="13" rx="1.2" fill="currentColor"/></svg>
+      </button>
+      <button class="cam-btn" id="muteBtn" type="button" aria-label="Mute music" aria-pressed="false">
+        <svg class="i-sound" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 7.5h3l4-3.5v12l-4-3.5H3z" fill="currentColor"/><path d="M13 7a4 4 0 0 1 0 6M15.2 4.8a7 7 0 0 1 0 10.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <svg class="i-muted" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 7.5h3l4-3.5v12l-4-3.5H3z" fill="currentColor"/><path d="m13 7.5 5 5m0-5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <audio id="bgm" preload="auto" loop playsinline></audio>
+
+  <!-- ===================== PHOTO / VIDEO VIEWER ===================== -->
+  <div class="playback" id="playback" role="dialog" aria-modal="true" aria-label="Photo and video viewer" hidden>
+    <div class="playback__hud">
+      <span class="pb-mode"><svg viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><path d="M2 1v8l7-4z" fill="currentColor"/></svg> PLAY</span>
+      <span class="pb-count" id="pbCount"></span>
+      <span class="batt batt--light"><i></i><i></i><i></i></span>
+    </div>
+    <div class="playback__stage" id="pbStage"></div>
+    <div class="playback__foot">
+      <button class="pb-btn" id="pbPrev" type="button" aria-label="Previous">
+        <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M13 3.5 6.5 10 13 16.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <span class="pb-date" id="pbDate"></span>
+      <button class="pb-btn" id="pbNext" type="button" aria-label="Next">
+        <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M7 3.5 13.5 10 7 16.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+    <button class="pb-btn pb-close" id="pbClose" type="button" aria-label="Close viewer">
+      <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <!-- ===================== LETTER ZOOM ===================== -->
+  <div class="zoomer" id="zoomer" role="dialog" aria-modal="true" aria-label="Letter, zoomed in" hidden>
+    <div class="zoomer__scroll" id="zoomScroll"><div class="zoomer__inner" id="zoomInner"></div></div>
+    <div class="zoomer__bar">
+      <button class="zbtn" id="zoomOut" type="button" aria-label="Zoom out">&minus;</button>
+      <span class="zoomer__level" id="zoomLevel" aria-live="polite">100%</span>
+      <button class="zbtn" id="zoomIn" type="button" aria-label="Zoom in">+</button>
+      <button class="zbtn zbtn--text" id="zoomFit" type="button">Fit</button>
+      <button class="zbtn zbtn--text zbtn--done" id="zoomClose" type="button">Done</button>
+    </div>
+    <p class="zoomer__tip" aria-hidden="true">pinch or double-tap to zoom</p>
+  </div>
+
+  <noscript><p class="noscript">This little gift needs JavaScript turned on to show the photos.</p></noscript>
+
+  <script src="assets/js/gallery-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
